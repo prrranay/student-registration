@@ -53,7 +53,7 @@ export default function CourseTypes() {
   };
 
   return (
-    <div style={{ padding: "1rem" }}>
+    <div className="p-4">
       <h2 className="my-1.5 pb-2">Course Types</h2>
       <form className="flex items-center my-1.5 gap-1" onSubmit={handleSubmit}>
         <TextField

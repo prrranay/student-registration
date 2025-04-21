@@ -71,10 +71,10 @@ export default function CourseOfferings() {
   };
 
   return (
-    <div style={{ padding: "1rem" }}>
+    <div className="p-4">
       <h2 className="my-1.5 pb-2">Course Offerings</h2>
 
-      <form className="flex items-center" onSubmit={handleSubmit} style={{ marginBottom: "1rem" }}>
+      <form className="flex md:items-center flex-col md:flex-row mb-2" onSubmit={handleSubmit}>
       <FormControl sx={{ m: 1, minWidth: 200 }}>
       <InputLabel id="course-type">- Select Course Type -</InputLabel>
         <Select
@@ -99,7 +99,8 @@ export default function CourseOfferings() {
           labelId="course"
           value={selectedCourse}
           onChange={(e) => setSelectedCourse(e.target.value)}
-          style={{ marginLeft: "0.5rem" }}
+          autoWidth
+          label=">-- Select Course --"
           >
           <MenuItem value="">-- Select Course --</MenuItem>
           {courses.map((c, i) => (

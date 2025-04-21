@@ -79,11 +79,11 @@ export default function Registrations() {
     }, {});
 
   return (
-    <div style={{ padding: "1rem" }}>
+    <div className="p-4" >
       <h2 className="my-1.5 pb-2">Student Registrations</h2>
 
       {/* Filter by Course Type */}
-      <div className="flex items-center" style={{ marginBottom: "1rem" }}>
+      <div className="flex items-center mb-2">
         <label>
           Filter by Course Type:{" "}
         </label>
@@ -108,7 +108,7 @@ export default function Registrations() {
       </div>
 
       {/* Registration Form */}
-      <form className="flex items-center" onSubmit={handleRegister} style={{ marginBottom: "2rem" }}>
+      <form className="flex md:items-center mb-2 flex-col md:flex-row" onSubmit={handleRegister}>
         <TextField
           value={studentName}
           onChange={(e) => setStudentName(e.target.value)}
@@ -120,7 +120,6 @@ export default function Registrations() {
         <Select
           value={selectedOffering}
           onChange={(e) => setSelectedOffering(e.target.value)}
-          style={{ marginLeft: "0.5rem" }}
           labelId="offer"
           id="offer-type"
           autoWidth
@@ -134,7 +133,7 @@ export default function Registrations() {
           ))}
         </Select>
         </FormControl>
-        <Button size="large" variant="contained" type="submit" style={{ marginLeft: "0.5rem" }}>
+        <Button size="large" variant="contained" type="submit">
           Register
         </Button>
         {error && <p style={{ color: "red" }}>{error}</p>}
